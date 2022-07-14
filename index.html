@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="Descripition" content="#" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Assem Saeed" />
+		<meta name="keywords" content="CRUD JS" />
+		<title>Assem Saeed</title>
+		<link rel="stylesheet" type="text/css" href="css/all.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		
+
+		<div class="container py-5">
+			
+			<div class="py-3">
+				<label for="inputProductName">Product Name</label>
+				<input type="text" oninput="validationInput(this)" id="inputProductName" class="form-control" />
+			</div>
+
+			<div class="py-3">
+				<label for="inputProductPrice">Product Price</label>
+				<input type="number" oninput="validationInputPrice()" id="inputProductPrice" class="form-control" />
+			</div>
+
+			<div class="py-3">
+				<label for="inputProductCategory">Product Category</label>
+				<input type="text" oninput="validationInput(this)" id="inputProductCategory" class="form-control" />
+			</div>
+
+			<div class="py-3">
+				<label for="inputProductDescription">Product Description</label>
+				<textarea id="inputProductDescription" class="form-control"></textarea>
+			</div>
+
+			<button class="btn btn-outline-info add d-inline-block"><i class="fa-solid fa-circle-plus"></i> Add Product</button>
+			<button class="btn btn-outline-primary update d-none"><i class="fa-solid fa-pen-to-square"></i> Update Product</button>
+			<button class="btn btn-outline-success Done d-none">Done</button>
+
+		</div>
+
+		<input type="text" oninput="searchProduct(this.value)" placeholder="Search Product Name" class="form-control my-5 container w-75" id="inputSearch" />
+
+		<table class="container table py-5 border text-center">
+			<thead>
+				<tr>
+					<th>Index</th>
+					<th>Product Name</th>
+					<th>Product Price</th>
+					<th>Product Category</th>
+					<th>Product Description</th>
+					<th>Update</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+				
+			</tbody>
+		</table>
+
+
+		<script type="text/javascript" src="js/all.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
